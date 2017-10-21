@@ -1,0 +1,63 @@
+{
+    "workbench.colorTheme": "Solarized Dark",
+
+    //-------- Editor configuration --------
+    // Controls the font family.
+    "editor.fontFamily": "YaHei-Consolas-Hybrid, Consolas, 'Courier New', monospace",
+
+    // Controls the font size in pixels.
+    "editor.fontSize": 14,
+
+    // Controls how the editor should render whitespace characters, possibilities are 'none', 'boundary', and 'all'. The 'boundary' option does not render single spaces between words.
+    "editor.renderWhitespace": "all",
+
+    // Controls the line height. Use 0 to compute the lineHeight from the fontSize.
+    "editor.lineHeight": 24,
+
+    //-------- Vim configuration --------
+    // What key should <leader> map to in remappings?
+    "vim.leader": ",",
+
+    // Enable the EasyMotion plugin for Vim.
+    "vim.easymotion": true,
+
+    // Show all matches of the most recent search pattern
+    "vim.hlsearch": true,
+
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+
+    // Enable some vim ctrl key commands that override otherwise common operations, like ctrl+c
+    "vim.useCtrlKeys": true,
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            //"before": ["<leader>","d"],
+            //"after": ["d", "d"]
+        },
+        {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        }
+    ],
+    "vim.handleKeys":{
+        "<C-a>": false
+        //"<C-f>": false
+    },
+
+    "vim.ignorecase" : true,
+
+    // Get rid of that annoying message that shows up everytime you make a new file
+    "vim.disableAnnoyingNeovimMessage": true
+}
