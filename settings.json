@@ -23,41 +23,64 @@
 
     // Show all matches of the most recent search pattern
     "vim.hlsearch": true,
-
+    
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
 
     // Enable some vim ctrl key commands that override otherwise common operations, like ctrl+c
     "vim.useCtrlKeys": true,
 
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j","j"],
-            "after": ["<Esc>"]
-        }
-    ],
     "vim.otherModesKeyBindingsNonRecursive": [
         {
-            //"before": ["<leader>","d"],
-            //"after": ["d", "d"]
-        },
-        {
-            "before":["<C-n>"],
+            "before":["<BS>"],
             "after":[],
             "commands": [
                 {
                     "command": ":nohl"
                 }
             ]
+        },
+        {
+            "before":["<leader>", "<leader>", "h"],
+            "after":["<C-w>", "h"]
+        },
+        {
+            "before":["<leader>", "<leader>", "j"],
+            "after":["<C-w>", "j"]
+        },
+        {
+            "before":["<leader>", "<leader>", "k"],
+            "after":["<C-w>", "k"]
+        },
+        {
+            "before":["<leader>", "<leader>", "l"],
+            "after":["<C-w>", "l"]
         }
     ],
+
+    // Control status bar color based on current mode
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors" : {
+        "normal": "#005f5f",
+        "insert": "#5f0000",
+        "visual": "#5f00af",
+        "visualline": "#005f87",
+        "visualblock": "#86592d",
+        "replace": "#000000"
+    },
+
     "vim.handleKeys":{
         "<C-a>": false
-        //"<C-f>": false
     },
 
     "vim.ignorecase" : true,
 
     // Get rid of that annoying message that shows up everytime you make a new file
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "extensions.ignoreRecommendations": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    }
 }
